@@ -1,0 +1,66 @@
+<% include header.html %>
+<h1>Welcome <span style="color:red"><%= user.username%></span>, 欢迎登陆！！</h1>
+<a class="btn" href="/logout">退出</a>
+<p>
+<div class="progress progress-striped active">
+	<div class="bar" style="width: 60%;"></div>
+</div>
+<div class="row">
+	<p><span class="label label-info">文章欣赏</span></p>
+				<div class="span20">
+					<p class="label label-success center">沁园春-雪</p>
+					北国风光，千里冰封，万里雪飘。<br />
+					望长城内外，惟余莽莽；大河上下，顿失滔滔。 <br />
+					山舞银蛇，原驰蜡象，欲与天公试比高。 <br />
+					须晴日，看红装素裹，分外妖娆。 <br />
+					江山如此多娇，引无数英雄竞折腰。<br />
+					惜秦皇汉武，略输文采；唐宗宋祖，稍逊风骚。<br />
+					一代天骄，成吉思汗，只识弯弓射大雕。 <br />
+					俱往矣，数风流人物，还看今朝。<br />
+				</div>
+				<div class="span20">
+					<p class="label label-success">满江红</p>
+					  怒发冲冠，凭阑处、潇潇雨歇。<br />
+					  抬望眼、仰天长啸，壮怀激烈。<br />
+					  三十功名尘与土，八千里路云和月。<br />
+					  莫等闲，白了少年头，空悲切。<br />
+					  靖康耻，犹未雪；臣子恨，何时灭。<br />
+					  驾长车，踏破贺兰山缺。 <br />
+					  壮志饥餐胡虏肉，笑谈渴饮匈奴血。<br />
+					  待从头、收拾旧山河，朝天阙。<br />
+				</div>
+</div>
+</p>
+<button onclick="showModal()" class="btn btn-primary">评价</button>
+
+ <div id="mymodal" class="modal hide fade" >              
+	<div class="modal-header">            
+		<button type="button" class="close" data-dismiss="modal">&times;</button>    
+			<h3>添加收藏: 词写得不错哦！</h3>   
+	</div><!--Modal header-->  
+	
+	<div class="modal-body">       
+			<div class="row">          
+				<div class="span1"></div>     
+				<div class="span4 ">          
+					<h3>求评价(@^_^@) : </h3>     
+				</div>             
+				<div class="span4" id="ratingstar"  ></div>    
+				<div class="span1" id="target"></div>      
+			</div>       
+	</div><!--Modal body-->  
+    
+	<div class="modal-footer">
+    <a href="#" class="btn" data-dismiss="modal" >Close</a>     
+	<a href="#" class="btn btn-primary">Save changes</a>       
+	</div><!--Modal footer-->        
+ </div> <!--Modal-->
+ 
+ <script>
+	// 模态窗口
+	function showModal()
+	{
+		$("#mymodal").modal();  
+	}
+ </script>
+<% include footer.html %>
